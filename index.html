@@ -1,49 +1,207 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>Weighted distances in Preferential Attachment</title>
+	<!-- <author>Joost Jorritsma</author> -->
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/sky.css">
+	<link rel="stylesheet" href="css/multigraphForcefield.css">
+	<!-- <link rel="stylesheet" href="css/custom-gc.css"> -->
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/GraphAlgorithmLibraryFitzner.js"></script>
+	<script src="js/VisualFunctionFitzner.js"></script>
+  <script src="js/jsnetworkx.js"></script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class='footer'>
+			(No) explosion in Preferential Attachment, Joost Jorritsma (TU/e)
 		</div>
 
-		<script src="js/reveal.js"></script>
+		<div class="slides">
+			<section>
+				<section id="title-slide" class="center">
+					<h3 class="title">(No) explosion in<br /> preferential attachment</h2>
+						<p class="author"> Joost Jorritsma,
+							<br/>joint work with dr. J&uacute;lia Komj&aacute;thy
+							<br/><br/><small> Eindhoven University of Technology </small>
+						</p>
+						<aside class="notes">
+							Good afternoon everybody. I would like to thank the organisation for the opportunity to speak here about my research,
+							which focuses at the moment on the mathematical theory of explosion, information spreading, in networks.
+						</aside>
+				</section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+				<section>
+					<h3>Icebucket challenge goes viral</h3>
+					<div class="paragraph">
+						<video data-video-loop="loop" autoplay loop style="height:480px">
+							<source data-src="public/Ice bucket Challenge - Data visualization.mp4" />
+						</video>
+						<p>
+							How many people are reached before time $T$?
+						</p>
+					</div>
+					<aside class="notes">
+						In the background we see a visualization of the spreading of the Ice Bucket Challenge in the summer of 2019.
+						In this challenge that went viral on Facebook, you had to make a video where you had to throw a bucket of
+						icewater over your head, OR donate some money to charity. We see that after a slow start in May, the spread goes quicker and quicker.
+						In only a few months it was able to spread all over the world and billions got acquainted with it.
+					</aside>
+				</section>
+
+				<section>
+					<h3>More spreading in networks</h3>
+					<div class="paragraph" style="align: center">
+						<p>
+							<span class="image">
+								<img data-src="public/img/vaccin-icon.png" height="190">
+							</span>
+							<span class="image">
+								<img data-src="public/img/computer-virus.jpg" height="190">
+							</span>
+							<span class="image">
+								<img data-src="public/img/fake-news.jpg" height="190">
+							</span> <br />
+						</p>
+					</div>
+					<aside class="notes">
+						There are many more real-world examples where spread in networks is present:
+						diseases in the real-world, computer viruses over the internet, and more recently fake news has attracted much attention.
+					</aside>
+				</section>
+
+				<section data-background-image="public/img/facebook_world_network.jpg" data-background-opacity="0.4" class="center">
+					<h3>Mathematical analysis of models</h4>
+						<aside class="notes">
+							All these networks have in common that they are very large.
+							In my research I study spread in networks from a mathematical perspective.
+						</aside>
+				</section>
+			</section>
+
+			<section>
+				<h3 class="title">Preferential Attachment</h3>
+				<section>
+					<h4 class="title"> Barab&aacute;si - Albert model </h4>
+					<div>
+						<small>
+							Rich get richer produces power laws
+						</small>
+					</div>
+					<div id="prefSim"
+							class="fig-container"
+							style="height:440px"
+							data-fig-id="prefSim"
+							data-file="simulation.html"
+							data-transitions="1"></div>
+				</section>
+
+				<section>
+					<h4 class="title">Model spread with positive i.i.d. weights</h4>
+					<div class="container">
+						<div class="row">
+							<div class="col">
+							<object data="public/img/weighted-graph.svg" type="image/svg+xml" style="height:80%"></object>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col text-center">
+							$\small{L\sim\text{Exp}(1),  L\sim \text{Unif}[0, 2], L=1,  ...}$
+						</div>
+					</div>
+					</div>
+				</section>
+
+				<section>
+					<h4 class="title"> Node size influences spread</h4>
+					<div class="container">
+						<div class="row">
+							<div class="col text-center">
+								<div class="fig-container" style="height:500px; width:1200px" data-file="plotly-test.html" data-transitions="1"></div>
+							</div>
+					</div>
+				</div>
+				</section>
+			</section>
+
+				<section>
+					<h3 class="title">(No) explosion? - Results </h3>
+					<object data="public/img/main-question.svg" type="image/svg+xml" style="width:100%"></object>
+				</section>
+				<section data-transition="zoom">
+					<h3 class="title">(No) explosion?  - Results </h3>
+					<object data="public/img/main-results.svg" type="image/svg+xml" style="width:100%"></object>
+				</section>
+				<section data-transition="zoom">
+					<h3 class="title">(No) explosion? - Results </h3>
+					<object data="public/img/main-results-reflection-1.svg" type="image/svg+xml" style="width:100%"></object>
+				</section>
+				<section data-transition="zoom">
+					<h3 class="title">(No) explosion? - Results </h3>
+					<object data="public/img/main-results-reflection-2.svg" type="image/svg+xml" style="width:100%"></object>
+				</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			center: false,
+			autoPlayMedia: true,
+			navigationMode: "linear",
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true
+				},
+				{
+					src: 'plugin/math/math.js',
+					async: true
+				},
+				{
+					src: 'js/d3.min.js'
+				},
+				{
+					src: 'js/d3js.js'
+				},
+			]
+		});
+	</script>
+</body>
+
 </html>

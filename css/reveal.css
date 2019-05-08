@@ -1596,3 +1596,14 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+/*********************************************
+ * FOOTNOTE
+ *********************************************/
+.reveal .footer {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  font-size: 0.45em;
+  opacity: 0.4;
+}

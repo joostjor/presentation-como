@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/multigraphForcefield.css">
+<body>
+  <script src="js/d3.min.js"></script>
+  <script src="js/GraphAlgorithmLibraryFitzner.js"></script>
+  <script src="js/VisualFunctionFitzner.js"></script>
+  <script src="js/jsnetworkx.js"></script>
+  <div id="prefSimWeighted" class="prefSimWeighted" style="width:400px; height:400px"></div>
+  <script>
+  var G = new jsnx.Graph();
+
+  G.addNodesFrom([1,2,3, 4]);
+  // G.addNodesFrom([5], {group:0})
+  G.addEdgesFrom([[3, 4], [2, 4], [1,2],[2,3], [1,3]]);
+
+var color = d3.scale.category20();
+jsnx.draw(G, {
+    element: '#prefSimWeighted',
+    layoutAttr: {
+        charge: -120,
+        linkDistance: 200,
+        // gravity: 1,
+        // friction: 5
+    },
+    nodeAttr: {
+        r: 8,
+        // title: function(d) { return d.label;}
+    },
+    nodeStyle: {
+        fill: function(d) {
+            return color(0);
+        },
+        stroke: 'none'
+    },
+    edgeAttr: {
+      title: function(d) {return Math.floor(Math.random()*10) + 1;}
+    },
+    withEdgeLabels: true,
+    edgeLabels: function(d) {return Math.floor(Math.random()*10) + 1;},
+    edgeLabelStyle:{
+      'font-size': '40px'
+    },
+    height: 400,
+    width: 400
+});
+  </script>
+</body>
