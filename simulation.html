@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/multigraphForcefield.css">
+</head>
 <body>
   <script src="js/d3.min.js"></script>
   <script src="js/GraphAlgorithmLibraryFitzner.js"></script>
@@ -15,7 +17,7 @@
           delta = -.15,
           frameSpeed=350,
           node_radius=6,
-          link_distance=80;
+          link_distance=120;
 
   var force, svg, link, node, graph;
   var chartNotShown = true, chartelement = [], nameTag = {}, modelTag = "PrefAttachment", chartType = "";
@@ -43,16 +45,18 @@
         .attr('preserveAspectRatio','xMidYMid meet')
         .style("width", "" + width + "px")
         .style("height", "" + height + "px")
+        .style("overflow", "visible")
+        .style("padding", "75px 50px 50px")
         .style("position", "relative");
 
 
 
     force = d3.layout.force()
             .size([width-100, height-200]).charge(-60)
-            .gravity(.85)
+            .gravity(.1)
             .linkDistance(110)
             .nodes(graph.nodes)
-            .links(graph.links).charge(-60).linkDistance(Math.min(300,Math.max(10000/nrOfNodes, 80)));
+            .links(graph.links).charge(-60).linkDistance(Math.min(400,Math.max(10000/nrOfNodes, 80)));
     force.on("tick", tick).start();
 
 

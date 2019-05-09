@@ -52,15 +52,15 @@ function tick() {
 
 
 function addLogo() {
-    nameTag = svg.append("text")
-            .attr("class", "xlabel")
-            .attr("text-anchor", "end")
-            .attr("x", window.innerWidth * 6 / 7)
-            .attr("y", height - 5)
-            .style("font-family", "Raleway")
-            .style("fill", "rgba(0,0,0, 0.5)")
-            .style("font-size", "20px")
-            .text("Fitzner, networkpages.nl")[0][0];
+    // nameTag = svg.append("text")
+    //         .attr("class", "xlabel")
+    //         .attr("text-anchor", "end")
+    //         .attr("x", window.innerWidth * 6 / 7)
+    //         .attr("y", height - 5)
+    //         .style("font-family", "Raleway")
+    //         .style("fill", "rgba(0,0,0, 0.5)")
+    //         .style("font-size", "20px")
+    //         .text("Fitzner, networkpages.nl")[0][0];
 };
 
 
@@ -242,19 +242,19 @@ addEvent(window, "resize", function () {
     width = window.innerWidth || e.clientWidth || g.clientWidth,
             height = window.innerHeight || e.clientHeight || g.clientHeight;
     d3.select("svg").attr("width", width).attr("height", height);
-    if (nameTag !== null)
-        if (nameTag.parentNode !== undefined)
-            nameTag.parentNode.removeChild(nameTag);
-    addLogo();
-    if (!chartNotShown) {
-        removeChart();
-        if (chartType === "DistanceChart")
-            showDistance();
-        else if (chartType === "DegreehistChart")
-            createHistogram();
-    }
-    //         .attr("myGroup", "histgram")
-    force.size([width, height]);
+    // if (nameTag !== null)
+    //     if (nameTag.parentNode !== undefined)
+    //         nameTag.parentNode.removeChild(nameTag);
+    // addLogo();
+    // if (!chartNotShown) {
+    //     removeChart();
+    //     if (chartType === "DistanceChart")
+    //         showDistance();
+    //     else if (chartType === "DegreehistChart")
+    //         createHistogram();
+    // }
+    // //         .attr("myGroup", "histgram")
+    // force.size([width, height]);
 });
 
 

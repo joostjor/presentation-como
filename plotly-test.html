@@ -2,12 +2,13 @@
 <head>
   <!-- Plotly.js -->
   <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <!-- <link rel="stylesheet" href="plotly-test.css"> -->
+  <link rel="stylesheet" href="css/custom.css">
+
 </head>
 
 <script src = "spread-vis-multi.json"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
-<body id="tester">
+<body id="tester" style="width:960px; height:400px; margin:auto">
 
   <!-- <div id="tester" style="width:700px;height:700px; vertical-align: center; align: top"></div> -->
 
@@ -15,8 +16,8 @@
 <script>
 TESTER = document.getElementById('tester');
 var data = JSON.parse(dataFile);
-data.layout.width = 900;
-data.layout.height = 500;
+data.layout.width = 960;
+data.layout.height = 400;
 data.layout.margin = {l:0, r:0, b: 0, t:0, pad:0}
 Plotly.plot( TESTER,
               data["data"],

@@ -58,3 +58,7 @@
     &:first-of-type { padding-left: 0; }
   }
 }
+
+.svg-container {
+  margin: 0 auto !important;
+}

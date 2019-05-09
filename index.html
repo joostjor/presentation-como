@@ -31,6 +31,26 @@
 	<script src="js/GraphAlgorithmLibraryFitzner.js"></script>
 	<script src="js/VisualFunctionFitzner.js"></script>
   <script src="js/jsnetworkx.js"></script>
+
+	<!-- <style>
+    .row,
+    .col {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .row {
+        flex-flow: row wrap;
+        /* width: 100vw; */
+    }
+
+    .col {
+        flex-flow: column wrap;
+    }
+		</style> -->
 </head>
 
 <body>
@@ -107,17 +127,28 @@
 				<h3 class="title">Preferential Attachment</h3>
 				<section>
 					<h4 class="title"> Barab&aacute;si - Albert model </h4>
-					<div>
-						<small>
-							Rich get richer produces power laws
-						</small>
+					<div class="container">
+						<div class="row">
+							<div class="col text-center">
+							<small>
+								Rich get richer produces power laws
+							</small>
+						</div>
+						</div>
+						<div class="row">
+							<div id="prefSim"
+									class="fig-container"
+									style="height:525px; width: 500px; margin: -50px auto;"
+									data-fig-id="prefSim"
+									data-file="simulation.html"
+									data-transitions="1"></div>
+						</div>
+						<div class="row">
+							<div class="col text-center">
+							<small> networkpages.nl, Robert Fitzner </small>
+						</div>
+						</div>
 					</div>
-					<div id="prefSim"
-							class="fig-container"
-							style="height:440px"
-							data-fig-id="prefSim"
-							data-file="simulation.html"
-							data-transitions="1"></div>
 				</section>
 
 				<section>
@@ -218,7 +249,7 @@
 						</div>
 						<div class="row">
 							<div class="col text-center">
-								<div class="fig-container" style="height:500px; width:1200px" data-file="plotly-test.html" data-transitions="1"></div>
+								<div class="fig-container" style="height:400px; width: 960px" data-file="plotly-test.html" data-transitions="1"></div>
 							</div>
 					</div>
 				</div>
@@ -240,6 +271,10 @@
 				<section data-transition="zoom">
 					<h3 class="title">(No) explosion? - Results </h3>
 					<object data="public/img/main-results-reflection-2.svg" type="image/svg+xml" style="width:100%"></object>
+				</section>
+				<section data-transition="zoom">
+					<h3 class="title">Thank you! </h3>
+					<object data="public/img/main-results-final.svg" type="image/svg+xml" style="width:100%"></object>
 				</section>
 		</div>
 	</div>
