@@ -73,19 +73,21 @@
 
 				<section>
 					<h3>More spreading in networks</h3>
-					<div class="paragraph" style="align: center">
-						<p>
-							<span class="image">
-								<img data-src="public/img/vaccin-icon.png" height="190">
-							</span>
-							<span class="image">
-								<img data-src="public/img/computer-virus.jpg" height="190">
-							</span>
-							<span class="image">
-								<img data-src="public/img/fake-news.jpg" height="190">
-							</span> <br />
-						</p>
-					</div>
+						<div class="container">
+							<div class="row">
+								<div class="column text-center">
+									<span class="image">
+										<img data-src="public/img/vaccin-icon.png" height="190">
+									</span>
+									<span class="image">
+										<img data-src="public/img/computer-virus.jpg" height="190">
+									</span>
+									<span class="image">
+										<img data-src="public/img/fake-news.jpg" height="190">
+									</span>
+								</div>
+							</div>
+						</div>
 					<aside class="notes">
 						There are many more real-world examples where spread in networks is present:
 						diseases in the real-world, computer viruses over the internet, and more recently fake news has attracted much attention.
@@ -122,21 +124,98 @@
 					<h4 class="title">Model spread with positive i.i.d. weights</h4>
 					<div class="container">
 						<div class="row">
-							<div class="col">
-							<object data="public/img/weighted-graph.svg" type="image/svg+xml" style="height:80%"></object>
+							<div class="col text-center">
+								<small>
+									$\small{L\sim\text{Exp}(1),  L\sim \text{Unif}[0, 2], L=1,  ...}$
+								</small>
+								<br/><br/>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col text-center">
-							$\small{L\sim\text{Exp}(1),  L\sim \text{Unif}[0, 2], L=1,  ...}$
+						<div class="row">
+							<div class="col">
+							<object data="public/img/weighted-graph.svg" type="image/svg+xml" style="height:75%"></object>
 						</div>
 					</div>
 					</div>
 				</section>
-
 				<section>
-					<h4 class="title"> Node size influences spread</h4>
+					<h4 class="title">Model spread with positive i.i.d. weights</h4>
 					<div class="container">
+						<div class="row">
+							<div class="col text-center">
+								<small>
+								$\small{T_L^{0.5}}:=$ time to reach 50% of the nodes
+								</small> <br/><br/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+							<object data="public/img/weighted-graph-t0.svg" type="image/svg+xml" style="height:75%"></object>
+						</div>
+					</div>
+					</div>
+				</section>
+				<section>
+				<h4 class="title">Model spread with positive i.i.d. weights</h4>
+				<div class="container">
+					<div class="row">
+						<div class="col text-center">
+							<small>
+							$\small{T_L^{0.5}}:=$ time to reach 50% of the nodes
+							</small> <br/><br/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+						<object data="public/img/weighted-graph-t1.svg" type="image/svg+xml" style="height:75%"></object>
+					</div>
+				</div>
+				</div>
+			</section>
+			<section>
+			<h4 class="title">Model spread with positive i.i.d. weights</h4>
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<small>
+						$\small{T_L^{0.5}}:=$ time to reach 50% of the nodes
+						</small> <br/><br/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					<object data="public/img/weighted-graph-t2.svg" type="image/svg+xml" style="height:75%"></object>
+				</div>
+			</div>
+			</div>
+		</section>
+			<section>
+			<h4 class="title">Model spread with positive i.i.d. weights</h4>
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<small>
+						$\small{T_L^{0.5}}:=$ time to reach 50% of the nodes $\small{=3}$
+						</small> <br/><br/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					<object data="public/img/weighted-graph-t3.svg" type="image/svg+xml" style="height:75%"></object>
+				</div>
+			</div>
+			</div>
+		</section>
+				<section>
+					<h4 class="title"> Network size influences spread time</h4>
+					<div class="container">
+						<div class="row">
+							<div class="col text-center">
+								<small>
+								$\small{T_L^{0.5}}:=$ time to reach 50% of the nodes
+								</small>
+							</div>
+						</div>
 						<div class="row">
 							<div class="col text-center">
 								<div class="fig-container" style="height:500px; width:1200px" data-file="plotly-test.html" data-transitions="1"></div>
@@ -172,6 +251,9 @@
 		// - https://github.com/hakimel/reveal.js#configuration
 		// - https://github.com/hakimel/reveal.js#dependencies
 		Reveal.initialize({
+			width: 960,
+			height: 700,
+
 			center: false,
 			autoPlayMedia: true,
 			navigationMode: "linear",
