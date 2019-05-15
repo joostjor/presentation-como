@@ -26,18 +26,18 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="327.77302"
+     inkscape:cx="273.82607"
      inkscape:cy="187.21537"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
-     inkscape:window-width="800"
-     inkscape:window-height="431"
+     inkscape:window-width="1920"
+     inkscape:window-height="1026"
      inkscape:window-x="0"
-     inkscape:window-y="485"
-     inkscape:window-maximized="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
      inkscape:snap-nodes="false"
      inkscape:snap-others="true"
      inkscape:snap-global="true"
@@ -328,5 +328,27 @@
            d="m 803.27,412.02 -0.25,0.31 -0.23,0.3 -0.22,0.28 -0.22,0.26 -0.2,0.26 -0.19,0.24 -0.19,0.23 -0.17,0.22 -0.17,0.2 -0.16,0.2 -0.16,0.19 -0.15,0.17 -0.14,0.17 -0.14,0.17 -0.13,0.15 -0.13,0.15 -0.12,0.14 -0.13,0.13 -0.12,0.13 -0.12,0.13 -0.23,0.23 -0.24,0.23 -0.23,0.22 -0.25,0.22 -0.26,0.22 -0.14,0.11 -0.14,0.11 c -2.79,2.25 -5.59,3.15 -8.12,3.15 -5.83,0 -9.63,-5.47 -9.63,-11.3 h 1.11 c 0,4.87 3.33,8.9 7.72,8.9 2.89,0 5.13,-2.09 6.17,-3.14 1.25,-1.34 2.39,-2.89 5.44,-6.81 v 0 c -2.05,-3.59 -5.73,-8.62 -11.36,-8.62 -5.28,0 -7.97,5.18 -7.97,9.67 h -1.11 c 0,-5.74 3.69,-11.27 9.42,-11.27 5.74,0 9.86,4.53 12.32,8.52 2.68,-3.39 3.28,-4.13 4.82,-5.38 2.78,-2.25 5.58,-3.14 8.13,-3.14 5.83,0 9.61,5.49 9.61,11.32 h -1.09 c 0,-4.9 -3.35,-8.93 -7.72,-8.93 -2.9,0 -5.15,2.1 -6.19,3.14 -1.24,1.35 -2.39,2.89 -5.42,6.83 v 0 c 2.03,3.58 5.71,8.61 11.36,8.61 5.28,0 7.97,-5.17 7.97,-9.65 h 1.09 c 0,5.71 -3.69,11.25 -9.42,11.25 -5.72,0 -9.86,-4.54 -12.3,-8.52 z"
            inkscape:connector-curvature="0"
            style="fill:#000000;stroke-width:0" /></g>    </g>
+    <text
+       id="text7312-1-3"
+       y="287.33652"
+       x="108.75274"
+       style="font-style:normal;font-weight:normal;font-size:7.48896885px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18722422"
+       xml:space="preserve"><tspan
+         id="tspan7314-6-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-align:center;text-anchor:middle;stroke-width:0.18722422"
+         y="287.33652"
+         x="108.75274"
+         sodipodi:role="line">Small world</tspan></text>
+    <text
+       id="text7312-1-3-7"
+       y="287.43942"
+       x="44.02314"
+       style="font-style:normal;font-weight:normal;font-size:7.48896885px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18722422"
+       xml:space="preserve"><tspan
+         id="tspan7314-6-6-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-align:center;text-anchor:middle;stroke-width:0.18722422"
+         y="287.43942"
+         x="44.02314"
+         sodipodi:role="line">&quot;Smallest&quot; world</tspan></text>
   </g>
 </svg>
